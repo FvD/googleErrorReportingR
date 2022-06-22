@@ -17,7 +17,7 @@ Using the Google OAuth 2.0 authentication is on the wishlisht. The
 current version only authenticates using an API key so that we can have
 a call like:
 
-    report_error(api_key, message)
+    report_error(project_id, api_key, message)
 
 and have this work consistently.
 
@@ -85,7 +85,7 @@ googleErrorReportingR::report_error(project_id,
                                     api_key,
                                     message)
 #> Response [https://clouderrorreporting.googleapis.com/v1beta1/projects/infraestructura-pruebas/events:report?key=AIzaSyBCaoUQLO64yHmHt7CagO39V0IFGA86hMI]
-#>   Date: 2022-06-18 22:11
+#>   Date: 2022-06-22 14:44
 #>   Status: 200
 #>   Content-Type: application/json; charset=UTF-8
 #>   Size: 3 B

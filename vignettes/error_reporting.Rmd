@@ -38,20 +38,27 @@ erorr message, but note that we can still include dynamic content. For instance,
 we can setup a `tryCatch()` call and output the `e` (error) to a Error Reporting
 call.
 
-              message = "Error description",
-              # service
-              service = "My Service",
-              version = "0.0.1",
-              # context
-              method = "GET",
-              url = "https://example.com",
-              userAgent = "",
-              referrer = "",
-              responseStatusCode = "500",
-              remoteIp = "192.178.0.0.1",
-              user = "UserID",
-              #reportLocation
-              filepath
+```
+message = "Error description",
+
+# service
+service = "My Service",
+version = "0.0.1",
+
+# context
+method = "GET",
+url = "https://example.com",
+userAgent = "",
+referrer = "",
+responseStatusCode = "500",
+remoteIp = "192.178.0.0.1",
+user = "UserID",
+
+#reportLocation
+filepath
+linenumber
+....
+```
 
  note we leave the following items out for the following reasons
 - "eventTime": string, -- this has to be formated to Zulu, this is possible,

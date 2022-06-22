@@ -27,7 +27,7 @@ This is an R wrapper for the Google Cloud Platform Error Reporting API. I uses t
 
 Using the Google OAuth 2.0 authentication is on the wishlisht. The current version only authenticates using an API key so that we can have a call like:
 
-    report_error(api_key, message)
+    report_error(project_id, api_key, message)
 
 and have this work consistently.
 
