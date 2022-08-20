@@ -5,8 +5,7 @@
 #' @param message the error report to be written out to the
 #'
 #' @return No return, we focus on side effect
-list_errors <- function(project_id,
-                         api_key) {
+list_errors <- function(project_id) {
 
 
  # Authenticating with OAuth 2.0 should be possible with:
@@ -15,10 +14,11 @@ list_errors <- function(project_id,
 
 
   base_url <- "https://clouderrorreporting.googleapis.com/v1beta1/"
-  project_name <- paste0("projects/", project_id)
-  endpoint <- "/events?key="
+  project_name <- paste0("projectName=projects/", project_id, "/events")
+  project_name <- paste0(project_id, "/events")
+  project_name <- paste0("projects/", project_id, "/events")
 
-  url <- paste0(base_url, project_name, endpoint)
+  url <- paste0(base_url, project_name)
 
   httr::GET(url)
 }
